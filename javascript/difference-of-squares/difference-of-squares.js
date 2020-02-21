@@ -6,10 +6,6 @@ export class Squares {
   }
 
   generateSumOfSquares(n) {
-    if(n <= 1){
-      return 1;
-    }
-    return n*n + this.generateSumOfSquares(--n);
+    return (n < 2) ? 1 : n*n + this.generateSumOfSquares(--n);
   }
-
 }
