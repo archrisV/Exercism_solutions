@@ -5,10 +5,10 @@ export const secretHandshake = (number) => {
     throw new Error('Handshake must be a number');
   } 
   let result = [];
-  for(let i = 0; i < 4; i++){
-    if((number & Math.pow(2, i)) === Math.pow(2, i)){
+  for(let i = 0; i < answers.length; i++){
+    if((number & Math.pow(2, i))){
       result.push(answers[i]);
     }
   }
-  return (number & 16) === 16 ? result.reverse() : result;
+  return (number & 16) ? result.reverse() : result;
 };
