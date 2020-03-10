@@ -1,5 +1,5 @@
 export default class Bob {
-    public hey(statement: string) {
+    public hey(statement: string): string{
         let phrase = statement.trim();
         if (phrase.length == 0){
             return "Fine. Be that way!";
